@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Foto album</string>
+    <string name="label_homeTitle">Foto album</string>
 </resources>
