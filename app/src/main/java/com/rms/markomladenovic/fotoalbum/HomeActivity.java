@@ -1,10 +1,14 @@
 package com.rms.markomladenovic.fotoalbum;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -27,5 +31,13 @@ public class HomeActivity extends AppCompatActivity {
         //  call the constructor of CustomAdapter to send the reference and data to Adapter
         CustomAdapter customAdapter = new CustomAdapter(HomeActivity.this, names, images);
         recyclerView.setAdapter(customAdapter); // set the Adapter to RecyclerView
+
+        Button buttonToTravel = findViewById(R.id.buttonHome);
+        buttonToTravel.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent homeToTravel = new Intent(HomeActivity.this, TravelActivity.class);
+                startActivity(homeToTravel);
+            }
+        });
     }
 }

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TravelActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:background="@color/colorWhite"
+            app:srcCompat="@drawable/button_arrow_left" />
+
+        <ImageView
+            android:id="@+id/travelScreenLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/buttonBack"
+            android:layout_toEndOf="@id/buttonBack"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_marginEnd="@dimen/spacing_medium"
+            android:layout_marginRight="@dimen/spacing_medium"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textViewTravelTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/travelScreenLogo"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:text="@string/textView_travel_title"
+            android:textSize="@dimen/text_size_title"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutTravel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/textViewTravelTitle"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginRight="@dimen/spacing_medium"
+            android:layout_marginEnd="@dimen/spacing_medium"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:divider="@drawable/divider"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layoutLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_medium"
+                    android:layout_marginStart="@dimen/spacing_medium"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:layout_marginRight="@dimen/spacing_medium"
+                    android:layout_marginEnd="@dimen/spacing_medium"
+                    android:layout_toLeftOf="@id/imageViewLocation"
+                    android:layout_toStartOf="@id/imageViewLocation"
+                    android:text="@string/textview_location_title"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageViewLocation"
+                    android:layout_width="@dimen/icon_width"
+                    android:layout_height="@dimen/icon_height"
+                    android:layout_alignTop="@+id/textViewLocation"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/spacing_medium"
+                    android:layout_marginRight="@dimen/spacing_medium"
+                    app:srcCompat="@drawable/icon_destination" />
+
+                <TextView
+                    android:id="@+id/textViewContinent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/textViewLocation"
+                    android:layout_alignStart="@id/textViewLocation"
+                    android:layout_below="@id/textViewLocation"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="@string/label_continent"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <Spinner
+                    android:id="@+id/spinnerContinent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@id/imageViewLocation"
+                    android:layout_alignRight="@id/imageViewLocation"
+                    android:layout_alignLeft="@id/textViewContinent"
+                    android:layout_alignStart="@id/textViewContinent"
+                    android:layout_below="@id/textViewContinent"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:id="@+id/textViewCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/spinnerContinent"
+                    android:layout_alignStart="@id/spinnerContinent"
+                    android:layout_below="@id/spinnerContinent"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:text="@string/textview_country"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <EditText
+                    android:id="@+id/editTextCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@id/spinnerContinent"
+                    android:layout_alignRight="@id/spinnerContinent"
+                    android:layout_alignLeft="@id/textViewCountry"
+                    android:layout_alignStart="@id/textViewCountry"
+                    android:layout_below="@id/textViewCountry"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:ems="10"
+                    android:hint="@string/edittext_place_hint"
+                    android:inputType="text"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:id="@+id/textViewPlace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/editTextCountry"
+                    android:layout_alignStart="@id/editTextCountry"
+                    android:layout_below="@id/editTextCountry"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:text="@string/textview_place"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <EditText
+                    android:id="@+id/editTextPlace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/editTextCountry"
+                    android:layout_alignLeft="@id/textViewPlace"
+                    android:layout_alignRight="@id/editTextCountry"
+                    android:layout_alignStart="@id/textViewPlace"
+                    android:layout_below="@id/textViewPlace"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:ems="10"
+                    android:hint="@string/edittext_country_hint"
+                    android:inputType="text"
+                    android:textSize="@dimen/text_size_normal" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_medium"
+                    android:layout_marginStart="@dimen/spacing_medium"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:layout_marginRight="@dimen/spacing_medium"
+                    android:layout_marginEnd="@dimen/spacing_medium"
+                    android:layout_toLeftOf="@id/imageViewTime"
+                    android:layout_toStartOf="@id/imageViewTime"
+                    android:text="@string/textview_time_title"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageViewTime"
+                    android:layout_width="@dimen/icon_width"
+                    android:layout_height="@dimen/icon_height"
+                    android:layout_alignTop="@+id/textViewTime"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/spacing_medium"
+                    android:layout_marginRight="@dimen/spacing_medium"
+                    app:srcCompat="@drawable/icon_general_data" />
+
+                <TextView
+                    android:id="@+id/textViewTravelStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/textViewTime"
+                    android:layout_alignStart="@id/textViewTime"
+                    android:layout_below="@id/textViewTime"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="@string/textview_travel_start"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <DatePicker
+                    android:id="@+id/datePickerTravelStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/textViewTravelStart"
+                    android:layout_alignStart="@id/textViewTravelStart"
+                    android:layout_below="@id/textViewTravelStart"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:layout_centerHorizontal="true"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner" />
+
+                <TextView
+                    android:id="@+id/textViewTravelEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/textViewTime"
+                    android:layout_alignStart="@id/textViewTime"
+                    android:layout_below="@id/datePickerTravelStart"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:text="@string/textview_travel_end"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <DatePicker
+                    android:id="@+id/datePickerTravelEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/textViewTravelEnd"
+                    android:layout_alignStart="@id/textViewTravelEnd"
+                    android:layout_below="@id/textViewTravelEnd"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewCompany"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_medium"
+                    android:layout_marginStart="@dimen/spacing_medium"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:layout_marginRight="@dimen/spacing_medium"
+                    android:layout_marginEnd="@dimen/spacing_medium"
+                    android:layout_toLeftOf="@id/imageViewCompany"
+                    android:layout_toStartOf="@id/imageViewCompany"
+                    android:text="@string/textview_company_title"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/imageViewCompany"
+                    android:layout_width="@dimen/icon_width"
+                    android:layout_height="@dimen/icon_height"
+                    android:layout_alignTop="@+id/textViewCompany"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/spacing_medium"
+                    android:layout_marginRight="@dimen/spacing_medium"
+                    app:srcCompat="@drawable/icon_general_data" />
+
+                <TextView
+                    android:id="@+id/textViewTravelType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewCompany"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:layout_alignLeft="@id/textViewCompany"
+                    android:layout_alignStart="@id/textViewCompany"
+                    android:text="@string/textview_travel_type"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <Spinner
+                    android:id="@+id/spinnerTravelType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewTravelType"
+                    android:layout_alignStart="@id/textViewCompany"
+                    android:layout_alignLeft="@id/textViewCompany"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_alignRight="@id/imageViewCompany"
+                    android:layout_alignEnd="@id/imageViewCompany"/>
+
+                <TextView
+                    android:id="@+id/textViewFriends"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spinnerTravelType"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:layout_alignStart="@id/spinnerTravelType"
+                    android:layout_alignLeft="@id/spinnerTravelType"
+                    android:text="@string/textview_friend"
+                    android:textSize="@dimen/text_size_normal"/>
+
+                <EditText
+                    android:id="@+id/editTextFriends"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/spinnerTravelType"
+                    android:layout_alignLeft="@id/textViewFriends"
+                    android:layout_alignRight="@id/spinnerTravelType"
+                    android:layout_alignStart="@id/textViewFriends"
+                    android:layout_below="@id/textViewFriends"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:ems="10"
+                    android:hint="@string/edittext_friends_hint"
+                    android:inputType="textMultiLine"
+                    android:textSize="@dimen/text_size_normal" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/buttonSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_marginEnd="@dimen/spacing_medium"
+                android:layout_marginRight="@dimen/spacing_medium"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:background="@color/colorGreen"
+                android:text="@string/button_save_title" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
