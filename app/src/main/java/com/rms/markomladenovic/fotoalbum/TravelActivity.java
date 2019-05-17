@@ -15,10 +15,9 @@ public class TravelActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_travel);
 
-        LinearLayout linearLayoutTravel = (LinearLayout) findViewById(R.id.linearLayoutOverview);
+        LinearLayout linearLayoutTravel = (LinearLayout) findViewById(R.id.linearLayoutTravel);
         linearLayoutTravel.setShowDividers(LinearLayout.SHOW_DIVIDER_BEGINNING |
-                LinearLayout.SHOW_DIVIDER_MIDDLE |
-                LinearLayout.SHOW_DIVIDER_END);
+                LinearLayout.SHOW_DIVIDER_MIDDLE);
 
         Button buttonToTravel = findViewById(R.id.buttonSave);
         buttonToTravel.setOnClickListener(new View.OnClickListener(){
