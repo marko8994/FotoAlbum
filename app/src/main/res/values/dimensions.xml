@@ -7,11 +7,17 @@
     <dimen name="spacing_layout">56dp</dimen>
 
     <!--Text sizes-->
+    <dimen name="text_size_home_title">32sp</dimen>
     <dimen name="text_size_title">25sp</dimen>
     <dimen name="text_size_normal">20sp</dimen>
     <dimen name="text_size_edittext">18sp</dimen>
 
+    <dimen name="recycler_width">175dp</dimen>
+    <dimen name="recycler_height">175dp</dimen>
     <dimen name="icon_width">30dp</dimen>
     <dimen name="icon_height">30dp</dimen>
-    <dimen name="line_height">2dp</dimen>
+    <dimen name="line_height">4dp</dimen>
+    <dimen name="line_recicler_divider">2dp</dimen>
+
+
 </resources>

@@ -18,6 +18,40 @@
     <string name="edittext_friends_hint">Unesite imena prijatelja</string>
     <string name="button_save_title">Sačuvaj detalje albuma</string>
     <string name="textview_overview_title">Pregled sačuvanih podataka</string>
+    <string name="text_view_general_data_prefix">Uspešno su sačuvani svi podaci o Vašem putovanju u</string>
+    <string name="text_view_time_data_prefix">Rekli ste da je put počeo</string>
+    <string name="text_view_time_data_inner_sufix">i da ste se vratili</string>
+    <string name="text_view_friends_sufix">Na</string>
+    <string name="text_view_friends_inner_sufix">su Vas pratili</string>
+    <string name="text_view_friend_sufix">ste išli sami</string>
+    <string name="text_view_general_data_invalid_entry">Niste popunili kompletne podatke o destinaciji Vašeg putovanja</string>
+    <string-array name="images_array">
+        <item>image_001</item>
+        <item>image_002</item>
+        <item>image_003</item>
+        <item>image_004</item>
+        <item>image_005</item>
+        <item>image_006</item>
+        <item>image_007</item>
+        <item>image_008</item>
+        <item>image_009</item>
+        <item>image_010</item>
+        <item>image_011</item>
+        <item>image_012</item>
+        <item>image_013</item>
+        <item>image_014</item>
+        <item>image_015</item>
+        <item>image_016</item>
+        <item>image_017</item>
+        <item>image_018</item>
+        <item>image_019</item>
+        <item>image_020</item>
+        <item>image_021</item>
+        <item>image_022</item>
+        <item>image_023</item>
+        <item>image_024</item>
+        <item>image_025</item>
+    </string-array>
     <string-array name="continent_array">
         <item>Evropa</item>
         <item>Severna Amerika</item>
@@ -26,6 +60,12 @@
         <item>Južna Amerika</item>
         <item>Australija</item>
         <item>Antarktik</item>
+    </string-array>
+    <string-array name="travel_type_array">
+        <item>Porodično putovanje</item>
+        <item>Poslovno putovanje</item>
+        <item>Putovanje sa prijateljima</item>
+        <item>Samostalna avantura</item>
     </string-array>
 
 </resources>

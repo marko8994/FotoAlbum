@@ -4,6 +4,6 @@
        stroke with color and width for creating outer line
     -->
     <stroke
-        android:width="@dimen/spacing_small"
-        android:color="@color/colorWhite" />
+        android:width="@dimen/line_recicler_divider"
+        android:color="@color/colorPrimary" />
 </shape>

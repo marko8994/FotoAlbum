@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:ignore="ContentDescription"
     tools:context=".OverviewActivity">
 
     <RelativeLayout
@@ -40,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/buttonToHome"
+            android:layout_below="@id/overviewScreenLogo"
             android:layout_marginTop="@dimen/spacing_small"
             android:text="@string/textview_overview_title"
             android:textSize="@dimen/text_size_title"/>
@@ -71,7 +72,7 @@
                     android:layout_marginLeft="@dimen/spacing_small"
                     android:layout_marginStart="@dimen/spacing_small"
                     android:layout_marginTop="@dimen/spacing_small"
-                    app:srcCompat="@drawable/icon_general_data" />
+                    app:srcCompat="@drawable/icon_destination" />
 
                 <TextView
                     android:id="@+id/textViewGeneralData"
@@ -85,7 +86,6 @@
                     android:layout_marginRight="@dimen/spacing_small"
                     android:layout_marginEnd="@dimen/spacing_small"
                     android:layout_marginBottom="@dimen/spacing_small"
-                    android:text="Lofsdsfsdfsdfregrdfreffrefrefrfefeferf"
                     android:textSize="@dimen/text_size_normal" />
             </RelativeLayout>
 
@@ -102,7 +102,7 @@
                     android:layout_marginLeft="@dimen/spacing_small"
                     android:layout_marginStart="@dimen/spacing_small"
                     android:layout_marginTop="@dimen/spacing_small"
-                    app:srcCompat="@drawable/icon_general_data" />
+                    app:srcCompat="@drawable/icon_date" />
 
                 <TextView
                     android:id="@+id/textViewTimeData"
@@ -116,7 +116,6 @@
                     android:layout_marginRight="@dimen/spacing_small"
                     android:layout_marginEnd="@dimen/spacing_small"
                     android:layout_marginBottom="@dimen/spacing_small"
-                    android:text="Lofsdsfsdfsdfregrdfreffrefrefrfefeferf"
                     android:textSize="@dimen/text_size_normal" />
             </RelativeLayout>
 
@@ -136,7 +135,7 @@
                     app:srcCompat="@drawable/icon_general_data" />
 
                 <TextView
-                    android:id="@+id/textViewFriendData"
+                    android:id="@+id/textViewFriendsData"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/spacing_medium"
@@ -147,10 +146,8 @@
                     android:layout_marginRight="@dimen/spacing_small"
                     android:layout_marginEnd="@dimen/spacing_small"
                     android:layout_marginBottom="@dimen/spacing_small"
-                    android:text="Lofsdsfsdfsdfregrdfreffrefrefrfefeferf"
                     android:textSize="@dimen/text_size_normal" />
             </RelativeLayout>
         </LinearLayout>
-
     </RelativeLayout>
 </ScrollView>

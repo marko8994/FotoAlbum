@@ -4,11 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:ignore="ContentDescription,Autofill"
     tools:context=".TravelActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
 
         <ImageButton
             android:id="@+id/buttonBack"
@@ -66,8 +69,10 @@
 
                 <TextView
                     android:id="@+id/textViewLocation"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
                     android:layout_marginEnd="@dimen/spacing_medium"
                     android:layout_marginLeft="@dimen/spacing_medium"
                     android:layout_marginRight="@dimen/spacing_medium"
@@ -106,11 +111,11 @@
                     android:id="@+id/spinnerContinent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignEnd="@id/imageViewLocation"
-                    android:layout_alignRight="@id/imageViewLocation"
                     android:layout_alignLeft="@id/textViewContinent"
                     android:layout_alignStart="@id/textViewContinent"
                     android:layout_below="@id/textViewContinent"
+                    android:layout_marginRight="@dimen/spacing_medium"
+                    android:layout_marginEnd="@dimen/spacing_medium"
                     android:layout_marginTop="@dimen/spacing_small"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/text_size_normal" />
@@ -128,11 +133,11 @@
 
                 <EditText
                     android:id="@+id/editTextCountry"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignEnd="@id/spinnerContinent"
+                    android:layout_alignEnd="@id/imageViewLocation"
+                    android:layout_alignRight="@id/imageViewLocation"
                     android:layout_alignLeft="@id/textViewCountry"
-                    android:layout_alignRight="@id/spinnerContinent"
                     android:layout_alignStart="@id/textViewCountry"
                     android:layout_below="@id/textViewCountry"
                     android:layout_marginTop="@dimen/spacing_small"
@@ -154,7 +159,7 @@
 
                 <EditText
                     android:id="@+id/editTextPlace"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignEnd="@+id/editTextCountry"
                     android:layout_alignLeft="@id/textViewPlace"
@@ -178,11 +183,15 @@
                     android:id="@+id/textViewTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
                     android:layout_marginTop="@dimen/spacing_medium"
                     android:layout_marginLeft="@dimen/spacing_medium"
                     android:layout_marginStart="@dimen/spacing_medium"
                     android:layout_marginEnd="@dimen/spacing_medium"
                     android:layout_marginRight="@dimen/spacing_medium"
+                    android:layout_toLeftOf="@id/imageViewTime"
+                    android:layout_toStartOf="@id/imageViewTime"
                     android:text="@string/textview_time_title"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/text_size_normal"
@@ -197,7 +206,7 @@
                     android:layout_alignTop="@+id/textViewTime"
                     android:layout_marginEnd="@dimen/spacing_medium"
                     android:layout_marginRight="@dimen/spacing_medium"
-                    app:srcCompat="@drawable/icon_general_data" />
+                    app:srcCompat="@drawable/icon_date" />
 
                 <TextView
                     android:id="@+id/textViewTravelStart"
@@ -251,6 +260,10 @@
                     android:id="@+id/textViewCompany"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@id/imageViewCompany"
+                    android:layout_toStartOf="@id/imageViewCompany"
                     android:layout_marginEnd="@dimen/spacing_medium"
                     android:layout_marginLeft="@dimen/spacing_medium"
                     android:layout_marginRight="@dimen/spacing_medium"
@@ -285,12 +298,12 @@
 
                 <Spinner
                     android:id="@+id/spinnerTravelType"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignEnd="@id/imageViewCompany"
                     android:layout_alignLeft="@id/textViewCompany"
-                    android:layout_alignRight="@id/imageViewCompany"
                     android:layout_alignStart="@id/textViewCompany"
+                    android:layout_marginEnd="@dimen/spacing_medium"
+                    android:layout_marginRight="@dimen/spacing_medium"
                     android:layout_below="@id/textViewTravelType"
                     android:layout_marginTop="@dimen/spacing_small"
                     android:textColor="@color/colorPrimaryDark"
@@ -311,9 +324,9 @@
                     android:id="@+id/editTextFriends"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignEnd="@+id/spinnerTravelType"
+                    android:layout_alignEnd="@+id/imageViewCompany"
                     android:layout_alignLeft="@id/textViewFriends"
-                    android:layout_alignRight="@id/spinnerTravelType"
+                    android:layout_alignRight="@id/imageViewCompany"
                     android:layout_alignStart="@id/textViewFriends"
                     android:layout_below="@id/textViewFriends"
                     android:layout_marginTop="@dimen/spacing_small"
@@ -328,10 +341,11 @@
                 android:id="@+id/buttonSave"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="@dimen/spacing_small"
                 android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/spacing_medium"
                 android:layout_marginTop="@dimen/spacing_medium"
+                android:paddingLeft="@dimen/spacing_medium"
+                android:paddingRight="@dimen/spacing_medium"
                 android:background="@color/colorGreen"
                 android:text="@string/button_save_title" />
 

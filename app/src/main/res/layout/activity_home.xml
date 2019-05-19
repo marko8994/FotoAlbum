@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:ignore="ContentDescription"
     tools:context=".HomeActivity">
 
     <RelativeLayout
@@ -14,8 +15,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:src="@drawable/logo"
-        android:contentDescription="TODO" />
+        android:paddingLeft="@dimen/spacing_small"
+        android:paddingRight="@dimen/spacing_small"
+        android:src="@drawable/logo" />
 
     <TextView
         android:id="@+id/textView"
@@ -25,7 +27,9 @@
         android:layout_marginTop="@dimen/spacing_small"
         android:layout_centerHorizontal="true"
         android:text="@string/label_homeTitle"
-        android:textSize="@dimen/text_size_title" />
+        android:textSize="@dimen/text_size_home_title"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -36,7 +40,7 @@
         android:layout_marginStart="@dimen/spacing_small"
         android:layout_marginRight="@dimen/spacing_small"
         android:layout_marginEnd="@dimen/spacing_small"
-        android:layout_marginTop="@dimen/spacing_medium" />
+        android:layout_marginTop="@dimen/spacing_small" />
 
     <Button
         android:id="@+id/buttonHome"
@@ -44,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/recyclerView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/spacing_large"
+        android:layout_marginTop="@dimen/spacing_medium"
         android:text="@string/button_home_title" />
     </RelativeLayout>
 </ScrollView>
